@@ -31,3 +31,15 @@ dist/
 build/
 .next/
 out/
+
+# ================= SYSTEM =================
+.DS_Store
+Thumbs.db
+
+# ================= EDITORS =================
+.vscode/
+*.log
+
+# ================= TEMP =================
+tmp/
+temp/
