@@ -13,3 +13,21 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+
+# ================= NODE / BACKEND =================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# Build folders
+dist/
+build/
+.next/
+out/
