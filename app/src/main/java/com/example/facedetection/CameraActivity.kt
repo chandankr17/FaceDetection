@@ -104,7 +104,7 @@ class CameraActivity : AppCompatActivity() {
                 override fun onCaptureSuccess(image: ImageProxy) {
                     val bitmap = imageProxyToBitmap(image)
                     image.close()
-                    // ✅ Use BitmapHolder instead of Intent
+                    // I used BitmapHolder for larger pics
                     BitmapHolder.bitmap = bitmap
                     val intent = Intent(this@CameraActivity, ResultActivity::class.java)
                     startActivity(intent)

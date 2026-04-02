@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity() {
         val btnTakePhoto = findViewById<Button>(R.id.btnTakePhoto)
 
         btnTakePhoto.setOnClickListener {
-            // Open CameraActivity
+            // It will open CameraActivity
             val intent = Intent(this, CameraActivity::class.java)
             startActivity(intent)
         }

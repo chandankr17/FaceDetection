@@ -13,12 +13,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Delay and move to HomeActivity
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)
-            finish() // prevent returning to splash
+            finish()
         }, splashTime)
     }
 }
