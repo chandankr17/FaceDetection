@@ -8,14 +8,21 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private val splashTime: Long = 2000 // 2 seconds
+    private val splashTime: Long = 2000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@MainActivity, HomeActivity::class.java)
-            startActivity(intent)
+            val session = SessionManager(this)
+            if (session.isLoggedIn()) {
+                // Already logged in → go to Home
+                startActivity(Intent(this, HomeActivity::class.java))
+            } else {
+                // Not logged in → go to Login
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
             finish()
         }, splashTime)
     }

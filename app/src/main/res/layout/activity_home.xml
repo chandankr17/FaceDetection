@@ -137,6 +137,17 @@
                 android:textSize="20sp"
                 android:padding="12dp"/>
 
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:backgroundTint="#FF5252"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"/>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
